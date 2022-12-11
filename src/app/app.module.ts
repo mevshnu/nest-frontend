@@ -12,6 +12,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { VieEmployeeTaskComponent } from './vie-employee-task/vie-employee-task.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
 
 const myRoute:Routes=[
   {
@@ -33,6 +35,14 @@ const myRoute:Routes=[
   {
     path:"viewEmployee",
     component:ViewEmployeeComponent
+  },
+  {
+    path:"viewEmpTask",
+    component: VieEmployeeTaskComponent
+  },
+  {
+    path:"viewTask",
+    component: ViewTaskComponent
   }
 ]
 
@@ -44,7 +54,9 @@ const myRoute:Routes=[
     AddUserComponent,
     AddTaskComponent,
     ViewEmployeeComponent,
-    NavbarComponent
+    NavbarComponent,
+    VieEmployeeTaskComponent,
+    ViewTaskComponent
   ],
   imports: [
     BrowserModule,

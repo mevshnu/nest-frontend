@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5">
+                    <table class="table justify-content-center table-striped table-bordered mb-5">
+                        <thead class="bg-light">
+                            <tr>
+                                <th class="text-center" scope="col">Task Title</th>
+                                <th class="text-center" scope="col">Description</th>
+                                <th class="text-center" scope="col">Date of Assign</th>
+                                <th class="text-center" scope="col">Date of Completion</th>
+                                <th class="text-center" scope="col">Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+                            <ng-template #loadingScreen class="text-center">
+                                <div class="spinner-grow text-danger" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-warning" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-info" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </ng-template>
+                            <ng-template #dataScreen>
+                                <tr *ngFor="let i of taskData">
+                                    <td class="text-center">{{i.taskTitle}}</td>
+                                    <td class="text-center">{{i.taskDescription}}</td>
+                                    <td class="text-center">{{i.taskDate}}</td>
+                                    <td class="text-center">{{i.taskCompleteDate}}</td>
+                                    <td class="text-center">{{i.taskStatus}}</td>
+                                    <td class="text-center">
+                                        <button *ngIf="!i.taskStatus" style="width: 6rem; height:2rem;" class="btn btn-danger" (click)="markAsComplete(i.id)"><p>Complete</p> </button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

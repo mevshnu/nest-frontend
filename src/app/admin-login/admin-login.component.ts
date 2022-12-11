@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -6,11 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent {
+  constructor(private route:Router){}
   username=""
   password=""
   readValues(){
     if(this.username=="admin" && this.password=="12345") {
-      alert("Success")
+      this.route.navigate(["/addEmployee"])
+
     }else{
       alert("Login Failed check you username and password once again")
     }

@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h1 class="text-center text-primary mb-4">All Employees</h1>
+                </div>
+                <div
+                    class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-5 d-flex justify-content-center">
+                    <div style="width: 50%;" class="d-flex">
+                        <label for="" class="form-label">Name</label>
+                        <input type="text" class="form-control mx-2" placeholder="" name="name"
+                            [(ngModel)]="name" (ngModelChange)="searchEmployee()">
+                    </div>
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-2"
+                    *ngIf="searchData.length!=0">
+                    <h5>Search Result</h5>
+                    <table class="table justify-content-center table-bordered mb-5">
+                        <thead class="bg-light">
+                            <tr>
+                                <th class="text-center" scope="col">Code</th>
+                                <th class="text-center" scope="col">Name</th>
+                                <th class="text-center" scope="col">Email</th>
+                                <th class="text-center" scope="col">Phone</th>
+                                <th class="text-center" scope="col">Designation</th>
+                                <th class="text-center" scope="col">Username</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of searchData">
+                                <td style="width: 12rem;" class="text-center">{{i.empCode}}</td>
+                                <td style="width: 7rem;" class="text-center">{{i.empName}}</td>
+                                <td style="width: 25rem;" class="text-center">{{i.empEmail}}</td>
+                                <td style="width: 10rem;" class="text-center">{{i.empPhone}}</td>
+                                <td style="width: 8rem;" class="text-center">{{i.empDesignation}}</td>
+                                <td style="width: 8rem;" class="text-center">{{i.username}}</td>
+                                <td style="width: 10rem;" class="text-center">
+                                    <button class="btn btn-danger mx-2" (click)="addTask(i.id)">Add Task</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5">
+                    <h5 *ngIf="searchData.length!=0">All Products</h5>
+                    <table class="table justify-content-center table-striped table-bordered mb-5">
+                        <thead class="bg-light">
+                            <tr>
+                                <th class="text-center" scope="col">Code</th>
+                                <th class="text-center" scope="col">Name</th>
+                                <th class="text-center" scope="col">Email</th>
+                                <th class="text-center" scope="col">Phone</th>
+                                <th class="text-center" scope="col">Designation</th>
+                                <th class="text-center" scope="col">Username</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                                <tr *ngFor="let i of employeeData">
+                                    <td style="width: 12rem;" class="text-center">{{i.empCode}}</td>
+                                    <td style="width: 7rem;" class="text-center">{{i.empName}}</td>
+                                    <td style="width: 25rem;" class="text-center">{{i.empEmail}}</td>
+                                    <td style="width: 10rem;" class="text-center">{{i.empPhone}}</td>
+                                    <td style="width: 8rem;" class="text-center">{{i.empDesignation}}</td>
+                                    <td style="width: 8rem;" class="text-center">{{i.username}}</td>
+                                    <td style="width: 10rem;" class="text-center">
+                                        <button class="btn btn-danger mx-2" (click)="addTask(i.id)">Add Task</button>
+                                      
+                                    </td>
+                                </tr>
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

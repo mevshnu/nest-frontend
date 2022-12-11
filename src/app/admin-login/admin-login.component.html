@@ -1,0 +1,32 @@
+ines (30 sloc)  1.94 KB
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5">
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-5">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <h1 class="text-primary">Admin Login</h1>
+                    </div>
+                    <div class="row mt-5 g-3">
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label text-secondary">Username</label>
+                            <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Enter username...">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label text-secondary">Password</label>
+                            <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Enter password...">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4 d-flex justify-content-center mt-5">
+                            <button class="p-2 btn btn-outline-dark mx-3" routerLink="/userlogin">User Login</button>
+                            <button class="btn btn-success p-2 mx-3" (click)="readValues()">Admin Login</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-5 d-flex justify-content-center">
+                    <img height="400px" src='' alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

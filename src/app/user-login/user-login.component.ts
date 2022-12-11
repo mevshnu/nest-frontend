@@ -23,7 +23,7 @@ export class UserLoginComponent {
           this.username = ""
           this.password = ""
           alert("Login Success ")
-          this.route.navigate(["/userLogin"])
+          this.route.navigate(["/viewEmpTask"])
         } else {
           alert("check your user name and password again")
         }

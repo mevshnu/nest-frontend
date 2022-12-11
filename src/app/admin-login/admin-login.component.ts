@@ -12,7 +12,7 @@ export class AdminLoginComponent {
   password=""
   readValues(){
     if(this.username=="admin" && this.password=="12345") {
-      this.route.navigate(["/addEmployee"])
+      this.route.navigate(["/adduser"])
 
     }else{
       alert("Login Failed check you username and password once again")

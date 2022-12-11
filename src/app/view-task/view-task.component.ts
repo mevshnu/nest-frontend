@@ -41,5 +41,4 @@ export class ViewTaskComponent {
   taskData:any = []
   searchData:any = []
   loading:boolean = true
-
 }

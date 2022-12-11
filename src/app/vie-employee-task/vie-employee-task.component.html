@@ -23,10 +23,10 @@
                                     <td class="text-center">{{i.taskCompleteDate}}</td>
                                     <td class="text-center">{{i.taskStatus}}</td>
                                     <td class="text-center">
-                                        <button *ngIf="!i.taskStatus" style="width: 6rem; height:2rem;" class="btn btn-danger" (click)="markAsComplete(i.id)"><p>Complete</p> </button>
+                                        <button *ngIf="!i.taskStatus" style="width: 6rem; height:2rem;" class="btn btn-success" (click)="markAsComplete(i.id)"><p>Complete</p> </button>
                                     </td>
                                 </tr>
-                            </ng-template>
+                           
 
                         </tbody>
                     </table>

@@ -15,19 +15,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
-                            <ng-template #loadingScreen class="text-center">
-                                <div class="spinner-grow text-danger" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <div class="spinner-grow text-warning" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <div class="spinner-grow text-info" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </ng-template>
-                            <ng-template #dataScreen>
+                            
                                 <tr *ngFor="let i of taskData">
                                     <td class="text-center">{{i.taskTitle}}</td>
                                     <td class="text-center">{{i.taskDescription}}</td>
